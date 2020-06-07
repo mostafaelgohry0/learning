@@ -41,6 +41,7 @@ build/Release
 node_modules/
 jspm_packages/
 
+
 # TypeScript v1 declaration files
 typings/
 
@@ -58,7 +59,7 @@ typings/
 
 # Output of 'npm pack'
 *.tgz
-
+*.zip
 # Yarn Integrity file
 .yarn-integrity
 
@@ -86,3 +87,12 @@ typings/
 
 # DynamoDB Local files
 .dynamodb/
+
+
+
+
+# pdf files 
+*.pdf
+
+# key 
+key/
