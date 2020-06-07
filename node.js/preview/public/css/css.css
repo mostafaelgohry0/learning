@@ -1,0 +1,27 @@
+input{
+    
+    height: 30px;
+    width: 150px;
+    
+    
+    
+}
+
+
+body{
+    
+    
+    /* background-color: aqua; */
+}
+
+
+
+.btnDate{
+    
+    
+    width: 80px;
+    height: 50px;
+    background-color:dodgerblue;
+    font-size: 18px;
+    
+}

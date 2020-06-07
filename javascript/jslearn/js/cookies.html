@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>cookies</title>
+
+	<script type="text/javascript">
+		
+		function setcookies(argument) {
+
+			if(document.form1.userName.value=="")
+				alert("empty")
+
+
+			cookievalue=escape(document.form1.userName.value)+ ";" ;
+			document.cookie="name=" + cookievalue;
+			alert("Setting Cookies : " + "name=" + cookievalue );
+		}
+
+
+
+		function readcookies(argument) {
+			var allcookies = document.cookie;
+			document.write("the cookies is : " + allcookies)
+
+			// Get all the cookies pairs in an array
+cookiearray = allcookies.split(';');
+
+// Now take key value pair out of this array
+for(var i=0; i<cookiearray.length; i++){
+name = cookiearray[i].split('=')[0];
+value = cookiearray[i].split('=')[1];
+document.write ("Key is : " + name + " and Value is : " + value);
+
+		}
+	}
+
+	</script>
+</head>
+<body>
+
+
+
+<form name="form1" action="">
+	<input type="text" name="userName">
+	<button onclick="setcookies()" >"click"</button>
+
+ <button  value="Get Cookie" onclick=readcookies()  > get cookies </button>
+</form>
+
+
+</body>
+</html>

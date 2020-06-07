@@ -1,0 +1,63 @@
+
+
+<!doctype html>
+
+<html>
+<head>
+
+<title> mongo db </title>
+<meta charset="utf-8">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+ <link rel="stylesheet" href="../public/css/css.css">
+
+
+</head>
+
+
+<body>
+
+
+
+<table class="table">
+  <thead class="thead-inverse">
+    <tr>
+      
+      <th>ID </th>
+      <th>Name</th>
+      <th>age</th>
+      <th>email</th>
+      <th>password</th>
+      <th>type</th>
+
+    </tr>
+  </thead>
+
+<% for (i in myData){ %> 
+           <tr>
+             <td>  <%=myData[i]._id%></td>
+             <td>  <%=myData[i].userFristName%></td>
+             <td>  <%=myData[i].userBirthDay%></td>
+             <td>  <%=myData[i].userEmail%></td>
+             <td>  <%=myData[i].userPassword%></td>
+             <td>  <%=myData[i].userImage%> </td>
+            
+           </tr>
+           
+           <%}%>
+
+
+  <tbody>
+   
+  </tbody>
+</table>
+
+
+</body>
+
+
+
+</html>
+

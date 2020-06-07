@@ -1,0 +1,104 @@
+<!doctype html>
+
+<html>
+
+<head>
+
+<script src="https://unpkg.com/vue"></script>
+
+
+<!--     css -->
+
+<style>
+
+
+button{
+margin-left :3%;
+width : 70px;
+height : 20px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<div id="myapp"> 
+
+{{name}}
+
+<h1> {{mm}}</h1>
+
+<input  v-model="inputData" > </input>
+<button @click=addItem>   add item  </button>
+<h2 v-if="inputData"> {{inputData}} </h2>
+
+<ul>
+<li v-for="item in mylist">  {{item}} <button @click=deleteItem(item)>  delete  </button> </li>
+</ul>
+
+
+
+
+
+<h2 v-bind:id="dynamicId"> hallo </h2>
+<img v-bind:src="picSrc">
+
+
+</div>
+
+<h3> jjkfdjkjf </h3>
+
+
+
+
+
+<script>
+  var app = new Vue({
+  el:'#myapp',
+ 
+  data: {
+  name : 'moddstafa',
+  mm:900,
+  'mylist': ['rrrr','rdddd','ddggdss',544],
+  inputData:'',
+  dynamicId  : 'new-id',
+  picSrc: 'Screenshot from 2017-08-07 13-24-16.png'
+  
+  },
+  
+  methods:{
+  
+  deleteItem : function (item) {
+  
+  var index = this.mylist.indexOf(item);
+  this.mylist.splice(index,1)  /// delete one item 
+  },
+  
+  addItem : function (){ 
+  
+  this.mylist.push(this.inputData)
+  this.inputData=''
+
+
+  
+  
+  }
+  
+
+  }
+  
+  
+ 
+});
+
+</script>
+
+
+</body>
+
+
+
+</html>
