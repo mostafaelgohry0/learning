@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+
+<head>
+    <title> angular </title>
+    <script src="angular.js"></script>
+    
+     <script>
+    var app = angular.module("myapp",[]);
+        app.controller("mycontroller",function($scope){
+            
+            $scope.data = "klkol"
+            $scope.visible = true;
+            $scope.toggle = function() {
+            $scope.visible = !$scope.visible;
+                 console.log($scope.myselect)
+            };
+        
+        $scope.add="hmk"
+        $scope.sub="oio"
+        $scope.arr=[3,4,3,2,323,4,4,4,4,4]    
+        $scope.my_select_data={
+            op1:"mkij1",
+            op2:"mj3",
+            op3:"ki4j",
+            op4:"mij3",
+            
+        }    
+       
+            console.log($scope.myselect)
+            
+        $scope.rept= {re:
+                      [
+                      {x:12},
+                      {x:23},
+                      {x:3422222223},
+                      {x:123},
+                      {x:13},
+                      {x:15},
+                      {x:16},
+                      {x:18},
+                      {x:13}
+                      ]
+                     }  
+            
+            
+    });
+         
+         
+    
+    </script>
+    
+    
+</head>
+    
+    <body>
+    
+    <div ng-app="myapp"  ng-controller="mycontroller">
+        <h3>
+         adding {{add}}
+        </h3>
+          <h3>
+         subing  {{sub}}
+        </h3>
+        <input type="text" ng-model="data">
+        <h1> hi {{data}}</h1>
+        <select ng-model=myselect>
+             <option>{{my_select_data.op1}} </option>
+             <option> {{my_select_data.op2}} </option>
+             <option> {{my_select_data.op3}} </option>
+             <option> {{my_select_data.op4}} </option>
+        
+        </select>
+         <p ng-repeat="i in rept.re" >{{i.x}}</p>
+        <button ng-click="toggle()">Toggle</button>
+         <p ng-hide="visible">Hello World!</p>
+    </div>
+
+        
+   
+</body>
+
+
+
+
+
+</html>

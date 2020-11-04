@@ -1,0 +1,26 @@
+{
+  "name": "node_mongo",
+  "version": "1.0.0",
+  "description": "work with mongo db with node js and express",
+  "main": "node_mongo.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "mongo",
+    "nodejs",
+    "express"
+  ],
+  "author": "mostafaelgohry",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "ejs": "^2.5.7",
+    "express": "^4.15.4",
+    "mongodb": "^2.2.31",
+    "socket.io": "^2.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.1"
+  }
+}

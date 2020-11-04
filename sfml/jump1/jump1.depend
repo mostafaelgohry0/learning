@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1561974565 source:/home/elgohryeng/Desktop/jump1/main.cpp
+	<SFML/Graphics.hpp>
+	<time.h>
+

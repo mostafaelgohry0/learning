@@ -1,0 +1,146 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>js</title>
+
+
+
+
+<script type="text/javascript">
+
+
+class Block{
+
+
+ constructor(index, data, prevHash){
+    this.index = index;
+    this.timestamp = Math.floor(Date.now() / 1000);
+    this.data = data;
+    this.prevHash = prevHash;
+    this.hash = this.getHash();
+
+}
+
+ 
+
+getHash(){
+
+    return sha(JSON.stringify(this.data) + this.prevHash + this.index + this.timestamp);
+}
+
+}
+
+
+class BlockChain{
+    constructor(){
+        this.chain = [];
+    }
+
+
+    addBlock(data){
+    let index = this.chain.length;
+    let prevHash = this.chain.length !== 0 ? this.chain[this.chain.length - 1].hash : 0;
+    let block = new Block(index, data, prevHash);
+    this.chain.push(block);
+
+}
+
+
+
+chainIsValid(){
+    for(var i=0;i<this.chain.length;i++){
+        if(this.chain[i].hash !== this.chain[i].getHash()) 
+            return false;
+        if(i > 0 && this.chain[i].prevHash !== this.chain[i-1].hash)
+
+            return false;
+    }
+    return true;
+}
+}
+
+
+
+
+
+const CILCoin = new BlockChain();
+CILCoin.addBlock({sender: "Bruce wayne", reciver: "Tony stark", amount: 100});
+CILCoin.addBlock({sender: "Harrison wells", reciver: "Han solo", amount: 50});
+CILCoin.addBlock({sender: "Tony stark", reciver: "Ned stark", amount: 75});
+console.log(JSON.stringify(CILCoin, null, 4));
+
+
+
+
+
+	
+	document.write ("Hello World!")
+	var ob=[3,46,34,67,54,35];
+	var x;
+	for(x in ob ){
+
+		document.write(ob[x])
+		document.write("<br/>")
+	}
+
+function  hallo (x,y) {
+	
+	var z = x + y;
+	alert("hallo " + z)
+	//console.log(x+y)
+}
+
+function over (argument) {
+        console.log("over ")
+}
+
+function out (argument) {
+	console.log("out ")
+}
+	
+
+var myfun = new Function("x","y","document.write(x+y)")
+
+
+
+var arr1 = [2,4,6,3];
+console.log(arr1[3]);
+console.log(typeof (arr1));
+var arr2 = new Array ([3,5,2])
+console.log(arr1[0]);
+console.log(typeof(arr2));
+
+
+var ob = new Object();
+console.log(typeof(arr2));
+
+
+
+function book(titlej, author){
+this.title = titlej;
+this.author= author;
+}
+
+
+var myBook = new book("Perl", "Mohtashim");
+document.write("Book title is : " + myBook.title + "<br>");
+document.write("Book author is : " + myBook.author + "<br>");
+
+var str = "ffgfsas"
+document.write(str.link("www.facebook.com"));
+
+
+</script>
+
+
+</head>
+<body>
+
+
+<input type="button"  onclick ="myfun(5,8)" value="hi"> 
+
+<p onmouseover="over()"  onmouseout="out()">  click </p>
+<script type="text/javascript" src="js.js"></script>
+
+</body>
+</html>

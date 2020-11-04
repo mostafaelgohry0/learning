@@ -1,0 +1,74 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      html, body, #container {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+    <title>AnyChart Basic Example</title>
+  </head>
+  <body>
+    <div id="container"></div>
+    
+    
+    <hr><hr>
+     <div id="container2"> </div>
+
+    <script src="https://cdn.anychart.com/js/latest/anychart-bundle.min.js"></script>
+    <script>
+      // AnyChart code here
+      
+      
+      
+      
+anychart.onDocumentLoad(function() {
+  // create chart and set data
+  
+   var data = [
+    ["Winter", 4],
+    ["Spring", 7],
+    ["Summer", 45],
+    ["Fall", 10]
+  ]
+  
+  //var ob = JSON.parse(data);
+  
+  console.log(data.Winter);
+   var chart = anychart.column( data );
+  
+   var chart2 = anychart.pie( data );
+  
+  
+ 
+  
+  
+  
+  //set chart title
+  chart.title("AnyChart Basic Sample");
+  // set chart container and draw
+  chart.container("container").draw();
+  
+  
+  
+  
+  //set chart title
+  chart2.title("AnyChart Basic Sample");
+  // set chart container and draw
+  chart2.container("container2").draw();
+  
+  
+  
+  
+  
+  
+
+  
+});
+
+
+
+    </script>
+  </body>
+</html>
